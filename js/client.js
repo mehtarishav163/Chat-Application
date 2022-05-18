@@ -1,4 +1,4 @@
-const socket = io('http://localhost:8000', {transports: ['websocket', 'polling', 'flashsocket']});
+const socket = io('http://localhost:8000', { transports: ['websocket', 'polling', 'flashsocket'] });
 
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp')
@@ -11,7 +11,7 @@ const append = (message, position) => {
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement);
-    if(position == 'left') {
+    if (position == 'left') {
         audio.play();
     }
 
